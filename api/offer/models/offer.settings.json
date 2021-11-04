@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offers",
+  "info": {
+    "name": "offer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "open",
+        "closed"
+      ],
+      "default": "open",
+      "required": true
+    },
+    "trackingId": {
+      "type": "uid",
+      "required": true
+    },
+    "affiliate": {
+      "model": "affiliate"
+    }
+  }
+}
