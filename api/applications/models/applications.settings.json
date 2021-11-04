@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Applications",
+  "info": {
+    "name": "Applications",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "submitted",
+        "retracted"
+      ],
+      "required": true,
+      "unique": false,
+      "default": "submitted"
+    },
+    "trackingId": {
+      "type": "uid"
+    },
+    "applicant": {
+      "model": "applicant"
+    },
+    "offer": {
+      "model": "offer",
+      "via": "applicationsList"
+    },
+    "application": {
+      "model": "offer"
+    }
+  }
+}

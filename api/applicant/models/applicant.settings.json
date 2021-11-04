@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Applicant",
+  "info": {
+    "name": "Applicant",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "applicantName": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "applicantionInfo": {
+      "type": "string"
+    },
+    "offer": {
+      "model": "offer"
+    }
+  }
+}
